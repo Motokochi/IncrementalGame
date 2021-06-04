@@ -171,8 +171,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1458205261acf8a4bbdc4c354533030a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cultivation_realm: {fileID: 1897740415}
+  cultivation_realm_text: {fileID: 1897740415}
   cultivation_level_text: {fileID: 713617304}
+  cultivation_realm: 0
   cultivation_lvl: 0
   martial_dao_knowledge: 1
   saint_qi_natural_gain: 0.01
@@ -374,7 +375,7 @@ GameObject:
   - component: {fileID: 713617305}
   - component: {fileID: 713617304}
   m_Layer: 5
-  m_Name: Cultivation Level Text
+  m_Name: Cultivation Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
