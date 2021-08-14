@@ -35,6 +35,7 @@ public class IncrementalGameManager : MonoBehaviour
     public void ActionsPerTick()
     {
         InvokeRepeating("SaintQiNaturalGain", 1.0f, 1.0f);
+        InvokeRepeating("SaintQiNaturalGain", Time.deltaTime, Time.deltaTime);
     }
 
     public void Training()
