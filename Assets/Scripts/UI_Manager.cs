@@ -7,7 +7,6 @@ public class UI_Manager : MonoBehaviour
 {
     [Header("GameObjects")]
     [SerializeField] private GameObject combatManager;
-    [SerializeField] private CombatManager combat_manager_script;
     [SerializeField] private IncrementalGameManager incrementalGameManager;
 
     // Scripts
@@ -21,8 +20,6 @@ public class UI_Manager : MonoBehaviour
 
     void Start()
     {
-        combat_manager_script = combatManager.GetComponent<CombatManager>();
-        player_total_dmg_text.text = string.Format("{0:0.00}", combat_manager_script.player_total_dmg);
         UIManagerRequestComponents();
         player_total_dmg_text.text = string.Format("DPS: {0:0.00}", combat_manager_script.player_total_dmg);
     }
@@ -30,7 +27,6 @@ public class UI_Manager : MonoBehaviour
 
     void Update()
     {
-        player_total_dmg_text.text = string.Format("{0:0.00}", combat_manager_script.player_total_dmg);
         if (combat_manager_script.isInCombat)
         {
             player_total_dmg_text.text = string.Format("Total Damage: {0:0.00}", combat_manager_script.player_total_dmg);

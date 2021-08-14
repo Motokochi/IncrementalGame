@@ -17,48 +17,39 @@ public class PlayerScript : MonoBehaviour
 
     private void Update()
     {
-        PlayerPassiveDPS();
         
     }
 
     // Active DPS requires clicking from the player and doesn't scales of attspd.
     public float PlayerActiveDPS()
     {
-        float player_dps;
         float player_damage;
         float randValue = Random.value;
 
         if (randValue < player_crate)
         {
-            player_dps = player_atk * player_cdmg;
             player_damage = player_atk * player_cdmg;
         }
         else
         {
-            player_dps = player_atk;
             player_damage = player_atk;
         }
-        return player_dps;
         return player_damage;
     }
 
     // Passive DPS Scales of Player's attspd
     public float PlayerPassiveDPS()
     {
-        float player_dps;
         float player_damage;
         float randValue = Random.value;
 
         if (randValue < player_crate)
         {
-            player_dps = player_atk * player_cdmg * player_attspd;
             player_damage = player_atk * player_cdmg * player_attspd;
         } else
         {
-            player_dps = player_atk * player_attspd;
             player_damage = player_atk * player_attspd;
         }
-        return player_dps;
         return player_damage;
     }
 

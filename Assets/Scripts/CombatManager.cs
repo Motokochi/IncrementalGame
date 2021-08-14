@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CombatManager : MonoBehaviour
 {
-    [SerializeField] public float player_dps;
     [Header("Player")]
     [SerializeField] public float player_damage;
     [SerializeField] public float player_total_dmg;
@@ -12,8 +11,6 @@ public class CombatManager : MonoBehaviour
 
 
     [SerializeField] private GameObject player;
-    [SerializeField] private PlayerScript player_script;
-    
     private PlayerScript player_script;
 
     [Header("Timer")]
@@ -22,14 +19,11 @@ public class CombatManager : MonoBehaviour
 
     private void Start()
     {
-        player_script = player.GetComponent<PlayerScript>();
         CombatManagerRequestComponents();
         InvokeRepeating("ActionsDuringCombat", 1, 1);
     }
     private void Update()
     {
-        player_dps = player_script.PlayerPassiveDPS();
-        player_total_dmg = player_total_dmg + player_dps;
         if (isInCombat)
         {
             CombatTimer();
