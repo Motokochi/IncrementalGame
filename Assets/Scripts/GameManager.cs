@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     {
         GameManagerRequestsComponents(); //GameManager requests all the objects
         combatManager.player_script = playerManager.InitializePlayer(); //We initialize the player in the combatManager
-        trainingManager.CallRealmDictionary(); // We create the Realm Dictionary
         UI_Manager.UIManagerRequestComponents(); //UI requests the needed components
         combatManager.CombatManagerRequestsComponents(); //CombatManager requests needed components
         UI_Manager.cultiCaveScript = buildingManager.InitializeCultivationCave(); //We initialize the cultivationCave

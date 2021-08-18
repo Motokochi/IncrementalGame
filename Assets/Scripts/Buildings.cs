@@ -33,17 +33,8 @@ public abstract class Buildings : MonoBehaviour
             cost = value;
         }
     }
-    set
-    {
-        cost = value;
-    }
-}
-public float QiMulti
-{
-    get
     public float QiMulti        
     {
-        return qiMulti;
         get
         {
             return qiMulti;
@@ -53,13 +44,6 @@ public float QiMulti
             qiMulti = value;
         }
     }
-    set
-    {
-        qiMulti = value;
-    }
-}
-
- public void UpgradeBuilding()
     public void UpgradeBuilding()
     {
         BuildingLevel += 1;
@@ -67,7 +51,6 @@ public float QiMulti
         Cost = Mathf.RoundToInt(Cost);
         QiMulti += 0.1f;
     } 
-   
 
     public string ReturnLevel(){
         return buildingLevel.ToString();

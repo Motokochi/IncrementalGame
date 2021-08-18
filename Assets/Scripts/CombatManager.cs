@@ -11,7 +11,6 @@ public class CombatManager : MonoBehaviour
 
 
     [HideInInspector] public Player player_script;
-    [SerializeField] private GameObject go_playerManager;
     [SerializeField] private GameObject GOPlayerManager;
     private PlayerManager playerManager;
     
@@ -34,7 +33,6 @@ public class CombatManager : MonoBehaviour
     
     public void CombatManagerRequestsComponents() //CombatManager requests components
     {
-        playerManager = go_playerManager.GetComponent<PlayerManager>();
         playerManager = GOPlayerManager.GetComponent<PlayerManager>();
     }
 
