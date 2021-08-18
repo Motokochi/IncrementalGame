@@ -491,14 +491,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1936981362}
         m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
-        m_MethodName: SelectionCombatButton
-        m_Mode: 1
+        m_MethodName: BackButton
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: CombatScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &828052812
@@ -624,14 +624,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1936981362}
         m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
-        m_MethodName: SelectionCultivationButton
-        m_Mode: 1
+        m_MethodName: BackButton
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: TrainingScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &898496940
@@ -1307,12 +1307,15 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
         m_MethodName: BackButtonMenu
         m_Mode: 1
+        m_MethodName: BackButton
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_StringArgument: Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1528172039
@@ -1519,9 +1522,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   combatManager: {fileID: 0}
   incrementalGameManager: {fileID: 0}
+  GOTrainingManager: {fileID: 0}
+  cultiCaveObject: {fileID: 0}
+  cultiCaveScript: {fileID: 0}
+  PopUpbox: {fileID: 0}
+  PopUpbackground: {fileID: 0}
   player_total_dmg_text: {fileID: 0}
   player_dps: {fileID: 0}
   combatTimer: {fileID: 0}
+  CultiCavelvlText: {fileID: 0}
+  CultiCavecostText: {fileID: 0}
+  CultiCavelvlBelowButton: {fileID: 0}
 --- !u!1 &2007935060
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,9 +7,18 @@ using UnityEngine.SceneManagement;
 public class UI_Manager : MonoBehaviour
 {
     [Header("GameObjects")]
+    [Header("References")]
     [SerializeField] private GameObject combatManager;
     [SerializeField] private TrainingManager incrementalGameManager;
    // [SerializeField] private GameObject cultiCaveObject;
+    [SerializeField] private GameObject GOTrainingManager;
+    
+    [SerializeField] private GameObject cultiCaveObject;
+    private TrainingManager incrementalGameManager;
+    [HideInInspector] public CultivationCave cultiCaveScript;
+    private CombatManager combat_manager_script;
+
+    [Header("GameObjects")]
     [SerializeField] private Transform PopUpbox;
     [SerializeField] private CanvasGroup PopUpbackground;
 
@@ -20,10 +29,16 @@ public class UI_Manager : MonoBehaviour
 
 
     [Header("Texts")]
+    [Header("Combat Scene Texts")]
     [SerializeField] private Text player_total_dmg_text;
     [SerializeField] private Text player_dps;
     [SerializeField] private Text combatTimer;
     [SerializeField] private Text test;
+    
+    [Header("Training Scene Texts")]
+    [SerializeField] private Text CultiCavelvlText;
+    [SerializeField] private Text CultiCavecostText;
+    [SerializeField] private Text CultiCavelvlBelowButton;
 
     void Update()
     {
@@ -33,6 +48,8 @@ public class UI_Manager : MonoBehaviour
             player_dps.text = string.Format("DPS: {0:0.00}", combat_manager_script.player_dps);
         }
         combatTimer.text = string.Format("Timer: {0:0.00}", combat_manager_script.combatTimer);
+        CombatSceneUI();
+        TrainingSceneUI();
     }
 
     public void UIManagerRequestComponents()
@@ -41,6 +58,7 @@ public class UI_Manager : MonoBehaviour
         combat_manager_script = combatManager.GetComponent<CombatManager>();
         //Incremental Manager Components
         incremental_game_manager_script = incrementalGameManager.GetComponent<TrainingManager>();
+        incrementalGameManager = GOTrainingManager.GetComponent<TrainingManager>();
     }
 
     public void Play()
@@ -65,6 +83,7 @@ public class UI_Manager : MonoBehaviour
     }
 
     public void BackButton()
+    public void BackButton(string sceneName)
     {
         SceneManager.LoadScene(1);        // return to the previous scene
     }
@@ -77,6 +96,7 @@ public class UI_Manager : MonoBehaviour
     public void BackButtonTraining()
     {
         SceneManager.LoadScene(3);        // return to the training scene
+        SceneManager.LoadScene(sceneName);     // return to the previous scene
     }
 
     public void OnEnable()               //clicking on the Load Button enables the PopUp thus starting this
@@ -92,5 +112,24 @@ public class UI_Manager : MonoBehaviour
         PopUpbackground.LeanAlpha(0, 0.5f);                                                                             //making background invisible again
         PopUpbox.gameObject.SetActive(false);
         PopUpbackground.gameObject.SetActive(false);
+    }
+
+    public void CombatSceneUI(){
+        if (SceneManager.GetActiveScene().name  == "CombatScene"){
+            if (combat_manager_script.isInCombat)
+            {
+                player_total_dmg_text.text = string.Format("Total Damage: {0:0.00}", combat_manager_script.player_total_dmg);
+                player_dps.text = string.Format("DPS: {0:0.00}", combat_manager_script.player_dps);
+            }
+            combatTimer.text = string.Format("Timer: {0:0.00}", combat_manager_script.combatTimer);
+        }
+    }
+
+    public void TrainingSceneUI(){
+        if (SceneManager.GetActiveScene().name  == "TrainingScene"){
+            CultiCavelvlText.text = "LVL:" + cultiCaveScript.ReturnLevel();
+            CultiCavecostText.text = "Cost:" + cultiCaveScript.ReturnCost();
+            CultiCavelvlBelowButton.text ="LVL:" + cultiCaveScript.ReturnLevel();
+        }
     }
 }

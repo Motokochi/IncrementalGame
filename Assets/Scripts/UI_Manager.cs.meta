@@ -4,6 +4,19 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences: []
+  defaultReferences:
+  - combatManager: {instanceID: 0}
+  - GOTrainingManager: {instanceID: 0}
+  - cultiCaveObject: {instanceID: 0}
+  - cultiCaveScript: {instanceID: 0}
+  - PopUpbox: {instanceID: 0}
+  - PopUpbackground: {instanceID: 0}
+  - player_total_dmg_text: {instanceID: 0}
+  - player_dps: {instanceID: 0}
+  - combatTimer: {instanceID: 0}
+  - CultiCavelvlText: {instanceID: 0}
+  - CultiCavecostText: {instanceID: 0}
+  - CultiCavelvlBelowButton: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

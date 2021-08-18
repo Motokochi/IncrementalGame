@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     UI_Manager UI_Manager;
     [SerializeField] GameObject GOTrainingManager;
     TrainingManager trainingManager;
+    [SerializeField] GameObject GOBuildingManager;
+    BuildingManager buildingManager;
     void Start()
     {
         GameManagerRequestsComponents(); //GameManager requests all the objects
@@ -20,6 +22,10 @@ public class GameManager : MonoBehaviour
         trainingManager.CallRealmDictionary(); // We create the Realm Dictionary
         UI_Manager.UIManagerRequestComponents(); //UI requests the needed components
         combatManager.CombatManagerRequestsComponents(); //CombatManager requests needed components
+        UI_Manager.cultiCaveScript = buildingManager.InitializeCultivationCave(); //We initialize the cultivationCave
+        trainingManager.CallRealmDictionary(); // We create the Realm Dictionary
+        
+        
     }
 
     public void GameManagerRequestsComponents(){
@@ -27,5 +33,6 @@ public class GameManager : MonoBehaviour
         trainingManager = GOTrainingManager.GetComponent<TrainingManager>();
         combatManager = GOCombatManager.GetComponent<CombatManager>();
         UI_Manager = GOUIManager.GetComponent<UI_Manager>();
+        buildingManager = GOBuildingManager.GetComponent<BuildingManager>();
     }
 }

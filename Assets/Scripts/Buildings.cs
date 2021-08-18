@@ -18,15 +18,25 @@ public int BuildingLevel
         return buildingLevel; 
     }
     set
+    public int BuildingLevel
     {
         buildingLevel = value;
+        get
     }
 }
 public float Cost
 {
     get
+    public float Cost
     {
         return cost;
+        get
+        {
+            return cost;
+        }
+        set
+        {
+            cost = value;
     }
     set
     {
@@ -38,6 +48,13 @@ public float QiMulti
     get
     {
         return qiMulti;
+        {
+            return qiMulti;
+        }
+        set
+        {
+            qiMulti = value;
+        }
     }
     set
     {
@@ -46,6 +63,7 @@ public float QiMulti
 }
 
  public void UpgradeBuilding()
+    public void UpgradeBuilding()
     {
         BuildingLevel += 1;
         Cost = Cost*1.2f;
@@ -53,4 +71,12 @@ public float QiMulti
         QiMulti += 0.1f;
     } 
    
+
+    public string ReturnLevel(){
+        return buildingLevel.ToString();
+    }
+    
+    public string ReturnCost(){
+        return cost.ToString();
+    } 
 } 

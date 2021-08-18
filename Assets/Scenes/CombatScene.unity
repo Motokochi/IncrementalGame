@@ -172,6 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
@@ -194,6 +196,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Timer: 30'
+  m_Text: 'Timer: 30.00'
 --- !u!222 &123218004
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -203,10 +206,13 @@ CanvasRenderer:
   m_GameObject: {fileID: 123218001}
   m_CullTransparentMesh: 1
 --- !u!1 &170267200
+--- !u!1 &170267200 stripped
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6970686863321916583, guid: 1cd3f0f7c2619914798e56aa24d2776e, type: 3}
+  m_PrefabInstance: {fileID: 6970686863223748327}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -300,6 +306,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
@@ -361,6 +369,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
   m_BlockingObjects: 0
   m_BlockingMask:
@@ -378,6 +388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
@@ -490,6 +502,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
@@ -512,6 +526,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
     m_Text: 'DPS: 0.00'
+  m_Text: 'DPS: 0.00'
 --- !u!1 &1039929475
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,6 +578,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
     m_WrapAround: 0
@@ -596,15 +613,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1372416192}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
         m_MethodName: BackButton
         m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument:
+          m_StringArgument: Selection
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1039929478
@@ -619,6 +639,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -694,6 +716,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -857,6 +881,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -876,6 +902,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
@@ -986,18 +1014,26 @@ PrefabInstance:
     - target: {fileID: 3496632104822612464, guid: cff38c12d10f94543ba7f8db792bb8dd, type: 3}
       propertyPath: player_dps
       value:
+      value: 
       objectReference: {fileID: 915319090}
     - target: {fileID: 3496632104822612464, guid: cff38c12d10f94543ba7f8db792bb8dd, type: 3}
       propertyPath: combatTimer
       value:
+      value: 
       objectReference: {fileID: 123218003}
     - target: {fileID: 3496632104822612464, guid: cff38c12d10f94543ba7f8db792bb8dd, type: 3}
       propertyPath: player_total_dmg_text
       value:
+      value: 
       objectReference: {fileID: 410122848}
+    - target: {fileID: 3496632105120181568, guid: cff38c12d10f94543ba7f8db792bb8dd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3496632105120181581, guid: cff38c12d10f94543ba7f8db792bb8dd, type: 3}
       propertyPath: player
       value:
+      value: 
       objectReference: {fileID: 170267200}
     - target: {fileID: 3496632105120181581, guid: cff38c12d10f94543ba7f8db792bb8dd, type: 3}
       propertyPath: isInCombat
@@ -1053,3 +1089,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cff38c12d10f94543ba7f8db792bb8dd, type: 3}
+--- !u!1001 &6970686863223748327
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6970686863321916581, guid: 1cd3f0f7c2619914798e56aa24d2776e, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970686863321916581, guid: 1cd3f0f7c2619914798e56aa24d2776e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 530.2042
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970686863321916581, guid: 1cd3f0f7c2619914798e56aa24d2776e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 447.97754
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970686863321916581, guid: 1cd3f0f7c2619914798e56aa24d2776e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -292.09842
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970686863321916581, guid: 1cd3f0f7c2619914798e56aa24d2776e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970686863321916581, guid: 1cd3f0f7c2619914798e56aa24d2776e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970686863321916581, guid: 1cd3f0f7c2619914798e56aa24d2776e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970686863321916581, guid: 1cd3f0f7c2619914798e56aa24d2776e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970686863321916581, guid: 1cd3f0f7c2619914798e56aa24d2776e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970686863321916581, guid: 1cd3f0f7c2619914798e56aa24d2776e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970686863321916581, guid: 1cd3f0f7c2619914798e56aa24d2776e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970686863321916583, guid: 1cd3f0f7c2619914798e56aa24d2776e, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1cd3f0f7c2619914798e56aa24d2776e, type: 3}

@@ -35,6 +35,7 @@ public class TrainingManager : MonoBehaviour
         if (fixedTimer >= 1){
             fixedTimer = 0;
             SaintQiNaturalGain();
+            QiNaturalGain();
         }
     }
 
@@ -44,6 +45,7 @@ public class TrainingManager : MonoBehaviour
     }
 
     public void SaintQiNaturalGain()
+    public void QiNaturalGain()
     {
         cultivation_lvl = cultivation_lvl + saint_qi_natural_gain;
     }
