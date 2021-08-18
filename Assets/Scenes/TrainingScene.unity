@@ -418,11 +418,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1668718313}
       - m_Target: {fileID: 1251081946}
         m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
-        m_MethodName: BackButtonTraining
-        m_Mode: 1
         m_MethodName: BackButton
         m_Mode: 5
         m_Arguments:
@@ -430,7 +427,6 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
           m_StringArgument: TrainingScene
           m_BoolArgument: 0
         m_CallState: 2
@@ -472,64 +468,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303637896}
   m_CullTransparentMesh: 1
---- !u!1 &311057886
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 311057887}
-  - component: {fileID: 311057888}
-  m_Layer: 5
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &311057887
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311057886}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 660444932}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &311057888
 --- !u!114 &309481551 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
   m_CorrespondingSourceObject: {fileID: 1935379457830357610, guid: cff38c12d10f94543ba7f8db792bb8dd, type: 3}
   m_PrefabInstance: {fileID: 5912074607542332176}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311057886}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1458205261acf8a4bbdc4c354533030a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cultivation_realm_text: {fileID: 1897740415}
-  cultivation_level_text: {fileID: 713617304}
-  cultivation_realm: 0
-  cultivation_lvl: 0
-  martial_dao_knowledge: 1
-  saint_qi_natural_gain: 0.01
 --- !u!1 &368425578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,7 +990,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 660444932}
-  m_RootOrder: 2
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1259,7 +1207,6 @@ RectTransform:
   m_Children:
   - {fileID: 2123319418}
   m_Father: {fileID: 660444932}
-  m_RootOrder: 4
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1311,19 +1258,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1668718313}
       - m_Target: {fileID: 1251081946}
         m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
         m_MethodName: BackButton
-        m_Mode: 1
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
           m_IntArgument: 2
           m_FloatArgument: 0
-          m_StringArgument: 
           m_StringArgument: Selection
           m_BoolArgument: 0
         m_CallState: 2
@@ -1356,7 +1299,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
   m_PixelsPerUnitMultiplier: 2
 --- !u!222 &737792088
 CanvasRenderer:
@@ -1625,7 +1567,6 @@ RectTransform:
   - {fileID: 1660749864}
   - {fileID: 562739704}
   m_Father: {fileID: 660444932}
-  m_RootOrder: 6
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1646,7 +1587,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combatManager: {fileID: 0}
-  incrementalGameManager: {fileID: 0}
   GOTrainingManager: {fileID: 0}
   cultiCaveObject: {fileID: 0}
   cultiCaveScript: {fileID: 0}
@@ -1655,7 +1595,6 @@ MonoBehaviour:
   player_total_dmg_text: {fileID: 0}
   player_dps: {fileID: 0}
   combatTimer: {fileID: 0}
-  test: {fileID: 0}
   CultiCavelvlText: {fileID: 0}
   CultiCavecostText: {fileID: 0}
   CultiCavelvlBelowButton: {fileID: 0}
@@ -1691,7 +1630,6 @@ RectTransform:
   m_Children:
   - {fileID: 1647412475}
   m_Father: {fileID: 660444932}
-  m_RootOrder: 3
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1743,8 +1681,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 311057888}
-        m_TargetAssemblyTypeName: IncrementalGameManager, Assembly-CSharp
       - m_Target: {fileID: 309481551}
         m_TargetAssemblyTypeName: TrainingManager, Assembly-CSharp
         m_MethodName: Training
@@ -1907,7 +1843,6 @@ RectTransform:
   - {fileID: 719780592}
   - {fileID: 777228635}
   m_Father: {fileID: 660444932}
-  m_RootOrder: 5
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2176,57 +2111,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660749863}
   m_CullTransparentMesh: 1
---- !u!1 &1668718312
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1668718314}
-  - component: {fileID: 1668718313}
-  m_Layer: 0
-  m_Name: UIManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1668718313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668718312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317bab6c049368946bcbabf4b87fad64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  combatManager: {fileID: 0}
-  incrementalGameManager: {fileID: 0}
-  PopUpbox: {fileID: 562739704}
-  PopUpbackground: {fileID: 1660749865}
-  player_total_dmg_text: {fileID: 0}
-  player_dps: {fileID: 0}
-  combatTimer: {fileID: 0}
-  test: {fileID: 0}
---- !u!4 &1668718314
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668718312}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 250.66608, y: 62.374634, z: -300.31317}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1858592312
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,7 +2207,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 660444932}
-  m_RootOrder: 1
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2375,53 +2258,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897740413}
   m_CullTransparentMesh: 1
---- !u!1 &2018323117
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2018323119}
-  - component: {fileID: 2018323118}
-  m_Layer: 0
-  m_Name: TempUI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2018323118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2018323117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7495313756505334f96359be5b3d84d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cultiCaveObject: {fileID: 2026197761}
-  CultiCavelvlText: {fileID: 180026561}
-  CultiCavecostText: {fileID: 368425580}
-  CultiCavelvlBelowButton: {fileID: 777228636}
---- !u!4 &2018323119
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2018323117}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1227.6493, y: 711.8651, z: -720.3803}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2026197761
 GameObject:
   m_ObjectHideFlags: 0
@@ -2434,7 +2270,6 @@ GameObject:
   - component: {fileID: 2026197762}
   m_Layer: 0
   m_Name: CultiCave
-  m_TagString: Untagged
   m_TagString: Cultivation Cave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

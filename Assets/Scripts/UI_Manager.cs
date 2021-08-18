@@ -6,11 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class UI_Manager : MonoBehaviour
 {
-    [Header("GameObjects")]
     [Header("References")]
     [SerializeField] private GameObject combatManager;
-    [SerializeField] private TrainingManager incrementalGameManager;
-   // [SerializeField] private GameObject cultiCaveObject;
     [SerializeField] private GameObject GOTrainingManager;
     
     [SerializeField] private GameObject cultiCaveObject;
@@ -22,18 +19,11 @@ public class UI_Manager : MonoBehaviour
     [SerializeField] private Transform PopUpbox;
     [SerializeField] private CanvasGroup PopUpbackground;
 
-    // Scripts
-    private CombatManager combat_manager_script;
-    private TrainingGameManager incremental_game_manager_script;
-   // private CultivationCave cultiCaveScript;
 
-
-    [Header("Texts")]
     [Header("Combat Scene Texts")]
     [SerializeField] private Text player_total_dmg_text;
     [SerializeField] private Text player_dps;
     [SerializeField] private Text combatTimer;
-    [SerializeField] private Text test;
     
     [Header("Training Scene Texts")]
     [SerializeField] private Text CultiCavelvlText;
@@ -42,12 +32,6 @@ public class UI_Manager : MonoBehaviour
 
     void Update()
     {
-        if (combat_manager_script.isInCombat)
-        {
-            player_total_dmg_text.text = string.Format("Total Damage: {0:0.00}", combat_manager_script.player_total_dmg);
-            player_dps.text = string.Format("DPS: {0:0.00}", combat_manager_script.player_dps);
-        }
-        combatTimer.text = string.Format("Timer: {0:0.00}", combat_manager_script.combatTimer);
         CombatSceneUI();
         TrainingSceneUI();
     }
@@ -57,8 +41,9 @@ public class UI_Manager : MonoBehaviour
         //Combat Manager Components
         combat_manager_script = combatManager.GetComponent<CombatManager>();
         //Incremental Manager Components
-        incremental_game_manager_script = incrementalGameManager.GetComponent<TrainingManager>();
         incrementalGameManager = GOTrainingManager.GetComponent<TrainingManager>();
+        //CultivationCave Components
+        cultiCaveScript = cultiCaveObject.GetComponent<CultivationCave>();
     }
 
     public void Play()
@@ -72,30 +57,8 @@ public class UI_Manager : MonoBehaviour
         Application.Quit();
     }
 
-    public void SelectionCombatButton()
-    {
-        SceneManager.LoadScene(2);        // load Combat scene
-    }
-
-    public void SelectionCultivationButton()
-    {
-        SceneManager.LoadScene(3);        // load Cultivation scene
-    }
-
-    public void BackButton()
     public void BackButton(string sceneName)
     {
-        SceneManager.LoadScene(1);        // return to the previous scene
-    }
-
-    public void BackButtonMenu()
-    {
-        SceneManager.LoadScene(0);        // return to the menu scene
-    }
-
-    public void BackButtonTraining()
-    {
-        SceneManager.LoadScene(3);        // return to the training scene
         SceneManager.LoadScene(sceneName);     // return to the previous scene
     }
 

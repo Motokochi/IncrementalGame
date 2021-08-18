@@ -87,7 +87,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combatManager: {fileID: 3496632105120181568}
-  incrementalGameManager: {fileID: 0}
   GOTrainingManager: {fileID: 5011241633667261757}
   cultiCaveObject: {fileID: 0}
   cultiCaveScript: {fileID: 0}
@@ -115,7 +114,6 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
   m_IsActive: 0
 --- !u!4 &3496632105120181582
 Transform:
@@ -223,7 +221,6 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
   m_IsActive: 1
 --- !u!4 &4604569662093331497
 Transform:

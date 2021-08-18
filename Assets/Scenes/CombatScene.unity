@@ -170,8 +170,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -195,7 +193,6 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Timer: 30'
   m_Text: 'Timer: 30.00'
 --- !u!222 &123218004
 CanvasRenderer:
@@ -205,58 +202,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123218001}
   m_CullTransparentMesh: 1
---- !u!1 &170267200
 --- !u!1 &170267200 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
   m_CorrespondingSourceObject: {fileID: 6970686863321916583, guid: 1cd3f0f7c2619914798e56aa24d2776e, type: 3}
   m_PrefabInstance: {fileID: 6970686863223748327}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 170267202}
-  - component: {fileID: 170267201}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &170267201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170267200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11598c67f4ca0ea449ad677d43bb4133, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  healthPoints: 0
-  attack: 10
-  defense: 0
-  critRate: 0
-  critDamage: 1.5
-  attackSpeed: 2
---- !u!4 &170267202
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170267200}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 530.2042, y: 447.97754, z: -292.09842}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410122846
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,8 +254,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -367,8 +315,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
@@ -386,8 +332,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
@@ -500,8 +444,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -525,7 +467,6 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-    m_Text: 'DPS: 0.00'
   m_Text: 'DPS: 0.00'
 --- !u!1 &1039929475
 GameObject:
@@ -576,8 +517,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -612,18 +551,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1372416192}
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
         m_MethodName: BackButton
-        m_Mode: 1
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument:
           m_StringArgument: Selection
           m_BoolArgument: 0
         m_CallState: 2
@@ -637,8 +573,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -714,8 +648,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -803,54 +735,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064121044}
   m_CullTransparentMesh: 1
---- !u!1 &1372416191
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1372416193}
-  - component: {fileID: 1372416192}
-  m_Layer: 0
-  m_Name: UIManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1372416192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1372416191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317bab6c049368946bcbabf4b87fad64, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  combatManager: {fileID: 0}
-  incrementalGameManager: {fileID: 0}
-  player_total_dmg_text: {fileID: 0}
-  player_dps: {fileID: 0}
-  combatTimer: {fileID: 0}
---- !u!4 &1372416193
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1372416191}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 250.66609, y: 62.374645, z: -300.31317}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1604751549
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,8 +763,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HorizontalAxis: Horizontal
@@ -900,8 +782,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
@@ -1013,17 +893,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3496632104822612464, guid: cff38c12d10f94543ba7f8db792bb8dd, type: 3}
       propertyPath: player_dps
-      value:
       value: 
       objectReference: {fileID: 915319090}
     - target: {fileID: 3496632104822612464, guid: cff38c12d10f94543ba7f8db792bb8dd, type: 3}
       propertyPath: combatTimer
-      value:
       value: 
       objectReference: {fileID: 123218003}
     - target: {fileID: 3496632104822612464, guid: cff38c12d10f94543ba7f8db792bb8dd, type: 3}
       propertyPath: player_total_dmg_text
-      value:
       value: 
       objectReference: {fileID: 410122848}
     - target: {fileID: 3496632105120181568, guid: cff38c12d10f94543ba7f8db792bb8dd, type: 3}
@@ -1032,7 +909,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3496632105120181581, guid: cff38c12d10f94543ba7f8db792bb8dd, type: 3}
       propertyPath: player
-      value:
       value: 
       objectReference: {fileID: 170267200}
     - target: {fileID: 3496632105120181581, guid: cff38c12d10f94543ba7f8db792bb8dd, type: 3}

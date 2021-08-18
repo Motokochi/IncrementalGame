@@ -34,7 +34,6 @@ public class TrainingManager : MonoBehaviour
         fixedTimer = fixedTimer + 1f * Time.deltaTime;
         if (fixedTimer >= 1){
             fixedTimer = 0;
-            SaintQiNaturalGain();
             QiNaturalGain();
         }
     }
@@ -44,7 +43,6 @@ public class TrainingManager : MonoBehaviour
         cultivation_lvl = cultivation_lvl + martial_dao_knowledge;
     }
 
-    public void SaintQiNaturalGain()
     public void QiNaturalGain()
     {
         cultivation_lvl = cultivation_lvl + saint_qi_natural_gain;

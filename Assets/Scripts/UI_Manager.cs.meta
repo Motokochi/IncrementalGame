@@ -3,7 +3,6 @@ guid: 317bab6c049368946bcbabf4b87fad64
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
   defaultReferences:
   - combatManager: {instanceID: 0}
   - GOTrainingManager: {instanceID: 0}

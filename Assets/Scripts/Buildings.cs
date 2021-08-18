@@ -11,25 +11,19 @@ public abstract class Buildings : MonoBehaviour
    public float qiMulti ;
 
 
-public int BuildingLevel
-{
-    get
-    {
-        return buildingLevel; 
-    }
-    set
     public int BuildingLevel
     {
-        buildingLevel = value;
         get
+        {   
+            return buildingLevel; 
+        }
+        set
+        {
+            buildingLevel = value;
+        }
     }
-}
-public float Cost
-{
-    get
     public float Cost
     {
-        return cost;
         get
         {
             return cost;
@@ -37,6 +31,7 @@ public float Cost
         set
         {
             cost = value;
+        }
     }
     set
     {
@@ -46,8 +41,10 @@ public float Cost
 public float QiMulti
 {
     get
+    public float QiMulti        
     {
         return qiMulti;
+        get
         {
             return qiMulti;
         }
