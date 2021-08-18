@@ -94,7 +94,6 @@ MonoBehaviour:
   player_damage: 0
   player_total_dmg: 0
   player_dps: 0
-  player: {fileID: 0}
   player_script: {fileID: 0}
   go_playerManager: {fileID: 5626607896133388026}
   isInCombat: 0
@@ -112,7 +111,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3496632105129546147}
-  - component: {fileID: 3496632105129546148}
   - component: {fileID: 556905271}
   m_Layer: 0
   m_Name: Game Manager
@@ -139,7 +137,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3496632105129546148
 --- !u!114 &556905271
 MonoBehaviour:
   m_ObjectHideFlags: 0
