@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
 
-public class IncrementalGameManager : MonoBehaviour
+public class TrainingManager : MonoBehaviour
 {
 
     //Variables
@@ -11,29 +11,29 @@ public class IncrementalGameManager : MonoBehaviour
     [SerializeField] private Text cultivation_realm_text;
     [SerializeField] private Text cultivation_level_text;
     [SerializeField] private int cultivation_realm = 0;
-    [SerializeField] private float cultivation_lvl;
+    [SerializeField] private float cultivation_lvl = 1;
     [SerializeField] private float martial_dao_knowledge = 1;
     [SerializeField] private float saint_qi_natural_gain = 0.01f;
 
+    [Header("Timers")]
+    [SerializeField] private float fixedTimer = 0;
+
     Dictionary<string, float> cultivation_realm_dictionary = new Dictionary<string, float>();
-
-
-    void Start()
-    {
-        cultivation_lvl = 1;
-        CallRealmDictionary();
-        ActionsPerTick();
-    }
 
     void Update()
     {
+        ActionsPerTick();
         cultivation_level_text.text = string.Format("Cultivation Level:\n{0:0.00}", cultivation_lvl);
         cultivation_realm = CultivationRealmUpdate(cultivation_lvl, cultivation_realm);
     }
 
     public void ActionsPerTick()
     {
-        InvokeRepeating("SaintQiNaturalGain", Time.deltaTime, Time.deltaTime);
+        fixedTimer = fixedTimer + 1f * Time.deltaTime; 
+        if (fixedTimer >= 1){
+            fixedTimer = 0;
+            SaintQiNaturalGain();
+        }
     }
 
     public void Training()
@@ -77,7 +77,7 @@ public class IncrementalGameManager : MonoBehaviour
             cultivation_realm_dictionary.Add(cultivation_realm_names_list[i], cultivation_realm_exp_threshold_list[i]);
         };
     }
-
+    
     public int CultivationRealmUpdate(float lvl, int realm) //called in ActionsPerTick() to see if the next realm has been reached
     {
         if (lvl > cultivation_realm_dictionary.ElementAt(realm).Value)
@@ -85,7 +85,6 @@ public class IncrementalGameManager : MonoBehaviour
             cultivation_realm_text.text = string.Format("Cultivation Realm:\n{0}", cultivation_realm_dictionary.ElementAt(realm+1).Key);
             realm = realm + 1;
         }
-
         return realm;
     }
 }

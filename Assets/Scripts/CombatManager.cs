@@ -7,54 +7,63 @@ public class CombatManager : MonoBehaviour
     [Header("Player")]
     [SerializeField] public float player_damage;
     [SerializeField] public float player_total_dmg;
-    [SerializeField] public float player_dps;
+    [SerializeField] public float player_dps = 0;
 
 
-    [SerializeField] private GameObject player;
-    private PlayerScript player_script;
+    [HideInInspector] public Player player_script;
+    [SerializeField] private GameObject go_playerManager;
+    private PlayerManager playerManager;
+    
 
-    [Header("Timer")]
+    [Header("CombatTimer")]
     [SerializeField] public bool isInCombat = false;
-    [SerializeField] public float combatTimer = 30.00f;
+    [SerializeField] public float combatMaxTimer;
+    [SerializeField] public float combatTimer;
 
-    private void Start()
-    {
-        CombatManagerRequestComponents();
-        InvokeRepeating("ActionsDuringCombat", 1, 1);
-    }
+    [Header("Timers")]
+    [SerializeField] private float dpsRefreshRate;
+    [SerializeField] private float timeBetweenAttacks;
+    [SerializeField][Range(0.06f,0.5f)] private float RefreshRate = 0.5f;
+
     private void Update()
     {
-        if (isInCombat)
-        {
-            CombatTimer();
-        }
+        CombatTimer();
+        ActionsDuringCombat();
     }
-
-
-    private void CombatManagerRequestComponents() //Initilizes all required Components from other GameObjects
+    
+    public void CombatManagerRequestsComponents() //CombatManager requests components
     {
-        player_script = player.GetComponent<PlayerScript>();
+        playerManager = go_playerManager.GetComponent<PlayerManager>();
     }
+
     private void ActionsDuringCombat() //Calls all the actions that should be performed while in combat
     {
-        if (isInCombat)
-        {
-            player_damage = player_script.PlayerPassiveDPS();
-            player_total_dmg = player_total_dmg + player_damage;
-            player_dps = player_total_dmg / (30 - combatTimer);
+        if (isInCombat){
+            dpsRefreshRate = dpsRefreshRate + 1f * Time.deltaTime; // Refresh rate of the DPS Text
+            timeBetweenAttacks = timeBetweenAttacks + 1f * Time.deltaTime; //Attacks per second
+            if (timeBetweenAttacks >= player_script.AttackSpeed){
+                timeBetweenAttacks = 0f;
+                player_damage = player_script.DamageDealt();
+                player_total_dmg = player_total_dmg + player_damage;
+            }
+            if (dpsRefreshRate >= RefreshRate ){
+                dpsRefreshRate = 0f;
+                player_dps = player_total_dmg / (combatMaxTimer - combatTimer);
+            }
         }
     }
     private void CombatTimer()
     {
-        if (combatTimer > 0)
-        {
-            combatTimer -= Time.deltaTime;
-        } else
-        {
+        if (isInCombat){
+                if (combatTimer > 0)
+            {
+                combatTimer -= Time.deltaTime;
+            } else {
             isInCombat = false;
-            combatTimer = 30.00f;
+            combatTimer = combatMaxTimer;
             player_total_dmg = 0;
             player_dps = 0;
+            }
         }
     }
 }
