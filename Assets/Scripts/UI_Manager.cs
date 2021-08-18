@@ -7,22 +7,16 @@ public class UI_Manager : MonoBehaviour
 {
     [Header("GameObjects")]
     [SerializeField] private GameObject combatManager;
-    [SerializeField] private IncrementalGameManager incrementalGameManager;
+    [SerializeField] private TrainingManager incrementalGameManager;
 
     // Scripts
     private CombatManager combat_manager_script;
-    private IncrementalGameManager incremental_game_manager_script;
+    private TrainingManager incremental_game_manager_script;
 
     [Header("Texts")]
     [SerializeField] private Text player_total_dmg_text;
     [SerializeField] private Text player_dps;
     [SerializeField] private Text combatTimer;
-
-    void Start()
-    {
-        UIManagerRequestComponents();
-        player_total_dmg_text.text = string.Format("DPS: {0:0.00}", combat_manager_script.player_total_dmg);
-    }
 
 
     void Update()
@@ -35,12 +29,11 @@ public class UI_Manager : MonoBehaviour
         combatTimer.text = string.Format("Timer: {0:0.00}", combat_manager_script.combatTimer);
     }
 
-    private void UIManagerRequestComponents()
+    public void UIManagerRequestComponents()
     {
-        // Combat Manager Components
+        //Combat Manager Components
         combat_manager_script = combatManager.GetComponent<CombatManager>();
-
         //Incremental Manager Components
-        incremental_game_manager_script = incrementalGameManager.GetComponent<IncrementalGameManager>();
+        incremental_game_manager_script = incrementalGameManager.GetComponent<TrainingManager>();
     }
 }

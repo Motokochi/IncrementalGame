@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Timer: '
+  m_Text: 'Timer: 30'
 --- !u!222 &123218004
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -228,16 +228,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 170267200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0371f08524340614c939ff3dc50cfa7d, type: 3}
+  m_Script: {fileID: 11500000, guid: 11598c67f4ca0ea449ad677d43bb4133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cultivation_realm: 0
-  player_hp: 0
-  player_atk: 0
-  player_def: 0
-  player_crate: 0
-  player_cdmg: 0
-  player_attspd: 0
+  healthPoints: 0
+  attack: 10
+  defense: 0
+  critRate: 0
+  critDamage: 1.5
+  attackSpeed: 2
 --- !u!4 &170267202
 Transform:
   m_ObjectHideFlags: 0
@@ -322,7 +321,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Total Damage:'
+  m_Text: 'Total Damage: 0.00'
 --- !u!222 &410122849
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -511,7 +510,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'DPS: '
+  m_Text: 'DPS: 0.00'
 --- !u!1 &1604751549
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,10 +679,6 @@ PrefabInstance:
       propertyPath: player_total_dmg_text
       value: 
       objectReference: {fileID: 410122848}
-    - target: {fileID: 3496632105120181581, guid: cff38c12d10f94543ba7f8db792bb8dd, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 170267200}
     - target: {fileID: 3496632105129546147, guid: cff38c12d10f94543ba7f8db792bb8dd, type: 3}
       propertyPath: m_RootOrder
       value: 4
