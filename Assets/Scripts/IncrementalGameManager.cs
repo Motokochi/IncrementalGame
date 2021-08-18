@@ -14,6 +14,7 @@ public class IncrementalGameManager : MonoBehaviour
     [SerializeField] private float cultivation_lvl;
     [SerializeField] private float martial_dao_knowledge = 1;
     [SerializeField] private float saint_qi_natural_gain = 0.01f;
+    
 
     Dictionary<string, float> cultivation_realm_dictionary = new Dictionary<string, float>();
 
@@ -23,12 +24,14 @@ public class IncrementalGameManager : MonoBehaviour
         cultivation_lvl = 1;
         CallRealmDictionary();
         ActionsPerTick();
+       // CultivationCave(1, 500f, 1.1f);
     }
 
     void Update()
     {
         cultivation_level_text.text = string.Format("Cultivation Level:\n{0:0.00}", cultivation_lvl);
         cultivation_realm = CultivationRealmUpdate(cultivation_lvl, cultivation_realm);
+        
     }
 
     public void ActionsPerTick()
@@ -88,4 +91,6 @@ public class IncrementalGameManager : MonoBehaviour
 
         return realm;
     }
+
+
 }
