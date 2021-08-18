@@ -42,7 +42,6 @@ public class UI_Manager : MonoBehaviour
 
 
     void Update()
-    {
     {   
         if (combat_manager_script.isInCombat)
         {

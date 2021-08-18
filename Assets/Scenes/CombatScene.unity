@@ -233,6 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cultivation_realm: 0
   player_hp: 0
+  player_atk: 10
   player_def: 0
   player_crate: 0.9
   player_cdmg: 1.5
