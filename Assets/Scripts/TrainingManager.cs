@@ -15,6 +15,7 @@ public class TrainingManager : MonoBehaviour
     [SerializeField] private float martial_dao_knowledge = 1;
     [SerializeField] private float saint_qi_natural_gain = 0.01f;
 
+
     [Header("Timers")]
     [SerializeField] private float fixedTimer = 0;
 
@@ -25,11 +26,12 @@ public class TrainingManager : MonoBehaviour
         ActionsPerTick();
         cultivation_level_text.text = string.Format("Cultivation Level:\n{0:0.00}", cultivation_lvl);
         cultivation_realm = CultivationRealmUpdate(cultivation_lvl, cultivation_realm);
+
     }
 
     public void ActionsPerTick()
     {
-        fixedTimer = fixedTimer + 1f * Time.deltaTime; 
+        fixedTimer = fixedTimer + 1f * Time.deltaTime;
         if (fixedTimer >= 1){
             fixedTimer = 0;
             SaintQiNaturalGain();
@@ -77,7 +79,7 @@ public class TrainingManager : MonoBehaviour
             cultivation_realm_dictionary.Add(cultivation_realm_names_list[i], cultivation_realm_exp_threshold_list[i]);
         };
     }
-    
+
     public int CultivationRealmUpdate(float lvl, int realm) //called in ActionsPerTick() to see if the next realm has been reached
     {
         if (lvl > cultivation_realm_dictionary.ElementAt(realm).Value)
@@ -87,4 +89,6 @@ public class TrainingManager : MonoBehaviour
         }
         return realm;
     }
+
+
 }
